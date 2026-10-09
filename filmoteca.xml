@@ -2,43 +2,55 @@
     <peliculas>
         <pelicula id="1">
             <titulo>
+            El viaje de Chihiro
             </titulo>
 
             <categoria>
+            Animación
             </categoria>
 
-            <duracion>
+            <duracion tipo="minutos">
+            125
             </duracion>
 
             <director>
+            Hayao Miyazaki
             </director>
         </pelicula>
 
         <pelicula id="2">
             <titulo>
+            Parque Jurásico
             </titulo>
 
             <categoria>
+            Ciencia ficción
             </categoria>
 
-            <duracion>
+            <duracion tipo="minutos">
+            127
             </duracion>
 
             <director>
+            Steven Spielberg
             </director>
         </pelicula>
 
         <pelicula id="3">
             <titulo>
+            El Señor de los Anillos: La Comunidad del Anillo
             </titulo>
 
             <categoria>
+            Fantasía
             </categoria>
 
-            <duracion>
+            <duracion tipo="minutos">
+            178
             </duracion>
 
             <director>
+            Peter Jackson
             </director>
         </pelicula>
     </peliculas>
@@ -46,43 +58,55 @@
     <libros>
         <libro id="1">
             <titulo>
+            Cien años de soledad
             </titulo>
 
             <categoria>
+            Realismo mágico
             </categoria>
 
             <numPaginas>
+            471
             </numPaginas>
 
             <escritor>
+            Gabriel García Márquez
             </escritor>
         </libro>
 
         <libro id="2">
             <titulo>
+            El principito
             </titulo>
 
             <categoria>
+            Fábula
             </categoria>
 
             <numPaginas>
+            96
             </numPaginas>
 
             <escritor>
+            Antoine de Saint-Exupéry
             </escritor>
         </libro>
 
         <libro id="3">
             <titulo>
+            Don Quijote de la Mancha
             </titulo>
 
             <categoria>
+            Novela clásica
             </categoria>
 
             <numPaginas>
+            863
             </numPaginas>
 
             <escritor>
+            Miguel de Cervantes
             </escritor>
         </libro>
     </libros>
