@@ -1,0 +1,89 @@
+<filmoteca>
+    <peliculas>
+        <pelicula id="1">
+            <titulo>
+            </titulo>
+
+            <categoria>
+            </categoria>
+
+            <duracion>
+            </duracion>
+
+            <director>
+            </director>
+        </pelicula>
+
+        <pelicula id="2">
+            <titulo>
+            </titulo>
+
+            <categoria>
+            </categoria>
+
+            <duracion>
+            </duracion>
+
+            <director>
+            </director>
+        </pelicula>
+
+        <pelicula id="3">
+            <titulo>
+            </titulo>
+
+            <categoria>
+            </categoria>
+
+            <duracion>
+            </duracion>
+
+            <director>
+            </director>
+        </pelicula>
+    </peliculas>
+
+    <libros>
+        <libro id="1">
+            <titulo>
+            </titulo>
+
+            <categoria>
+            </categoria>
+
+            <numPaginas>
+            </numPaginas>
+
+            <escritor>
+            </escritor>
+        </libro>
+
+        <libro id="2">
+            <titulo>
+            </titulo>
+
+            <categoria>
+            </categoria>
+
+            <numPaginas>
+            </numPaginas>
+
+            <escritor>
+            </escritor>
+        </libro>
+
+        <libro id="3">
+            <titulo>
+            </titulo>
+
+            <categoria>
+            </categoria>
+
+            <numPaginas>
+            </numPaginas>
+
+            <escritor>
+            </escritor>
+        </libro>
+    </libros>
+</filmoteca>
