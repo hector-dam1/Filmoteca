@@ -2,7 +2,43 @@
     <peliculas>
         <pelicula id="1">
             <titulo>
-            El viaje de Chihiro
+            Eyes Wide Shut
+            </titulo>
+
+            <categoria>
+            Drama / Misterio
+            </categoria>
+
+            <duracion tipo="minutos">
+            159
+            </duracion>
+
+            <director>
+            Stanley Kubrick
+            </director>
+        </pelicula>
+
+        <pelicula id="2">
+            <titulo>
+            Barry Lyndon
+            </titulo>
+
+            <categoria>
+            Drama / Épica
+            </categoria>
+
+            <duracion tipo="minutos">
+            185
+            </duracion>
+
+            <director>
+            Stanley Kubrick
+            </director>
+        </pelicula>
+
+        <pelicula id="3">
+            <titulo>
+            Ratatouille
             </titulo>
 
             <categoria>
@@ -10,47 +46,83 @@
             </categoria>
 
             <duracion tipo="minutos">
-            125
+            111
             </duracion>
 
             <director>
-            Hayao Miyazaki
+            Brad Bird
             </director>
         </pelicula>
 
-        <pelicula id="2">
+        <pelicula id="4">
             <titulo>
-            Parque Jurásico
+            El Planeta del Tesoro
             </titulo>
 
             <categoria>
-            Ciencia ficción
+            Animación / Ciencia ficción
             </categoria>
 
             <duracion tipo="minutos">
-            127
+            95
             </duracion>
 
             <director>
-            Steven Spielberg
+            Ron Clements y John Musker
             </director>
         </pelicula>
 
-        <pelicula id="3">
+        <pelicula id="5">
             <titulo>
-            El Señor de los Anillos: La Comunidad del Anillo
+            The Social Network
             </titulo>
 
             <categoria>
-            Fantasía
+            Drama biográfico
             </categoria>
 
             <duracion tipo="minutos">
-            178
+            120
             </duracion>
 
             <director>
-            Peter Jackson
+            David Fincher
+            </director>
+        </pelicula>
+
+        <pelicula id="6">
+            <titulo>
+            O Auto da Compadecida
+            </titulo>
+
+            <categoria>
+            Comedia / Aventura
+            </categoria>
+
+            <duracion tipo="minutos">
+            104
+            </duracion>
+
+            <director>
+            Guel Arraes
+            </director>
+        </pelicula>
+
+        <pelicula id="7">
+            <titulo>
+            Funny Games
+            </titulo>
+
+            <categoria>
+            Terror / Drama psicológico
+            </categoria>
+
+            <duracion tipo="minutos">
+            108
+            </duracion>
+
+            <director>
+            Michael Haneke
             </director>
         </pelicula>
     </peliculas>
@@ -58,57 +130,92 @@
     <libros>
         <libro id="1">
             <titulo>
-            Cien años de soledad
+            Los Hermanos Karamázov
             </titulo>
 
             <categoria>
-            Realismo mágico
+            Novela filosófica
             </categoria>
 
             <numPaginas>
-            471
+            824
             </numPaginas>
 
             <escritor>
-            Gabriel García Márquez
+            Fiódor Dostoyevski
             </escritor>
         </libro>
 
         <libro id="2">
             <titulo>
-            El principito
+            Poemas
             </titulo>
 
             <categoria>
-            Fábula
+            Poesía
             </categoria>
 
             <numPaginas>
-            96
+            150
             </numPaginas>
 
             <escritor>
-            Antoine de Saint-Exupéry
+            Stéphane Mallarmé
             </escritor>
         </libro>
 
         <libro id="3">
             <titulo>
-            Don Quijote de la Mancha
+            Gran Sertón: Veredas
             </titulo>
 
             <categoria>
-            Novela clásica
+            Novela
             </categoria>
 
             <numPaginas>
-            863
+            600
             </numPaginas>
 
             <escritor>
-            Miguel de Cervantes
+            João Guimarães Rosa
+            </escritor>
+        </libro>
+
+        <libro id="4">
+            <titulo>
+            Vidas secas
+            </titulo>
+
+            <categoria>
+            Novela regionalista
+            </categoria>
+
+            <numPaginas>
+            176
+            </numPaginas>
+
+            <escritor>
+            Graciliano Ramos
+            </escritor>
+        </libro>
+
+        <libro id="5">
+            <titulo>
+            Dublineses
+            </titulo>
+
+            <categoria>
+            Cuentos / Relatos cortos
+            </categoria>
+
+            <numPaginas>
+            256
+            </numPaginas>
+
+            <escritor>
+            James Joyce
             </escritor>
         </libro>
     </libros>
 </filmoteca>
-
