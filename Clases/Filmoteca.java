@@ -1,5 +1,9 @@
 package Filmoteca.Clases;
 
+/*
+ * Clase que representa la filmoteca.
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 

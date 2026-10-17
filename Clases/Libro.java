@@ -1,24 +1,24 @@
 package Filmoteca.Clases;
 
+/*
+ * Clase que representa un libro en la filmoteca.
+ */
+
 public class Libro {
 
     private int id;
     private String titulo;
     private String categoria;
     private int numPaginas;
-    private int duracionValor;
-    private String duracionTipo;
     private String escritor;
 
     public Libro() {}
 
-    public Libro(int id, String titulo, String categoria, int numPaginas, int duracionValor, String duracionTipo, String escritor) {
+    public Libro(int id, String titulo, String categoria, int numPaginas, String escritor) {
         this.id = id;
         this.titulo = titulo;
         this.categoria = categoria;
         this.numPaginas = numPaginas;
-        this.duracionValor = duracionValor;
-        this.duracionTipo = duracionTipo;
         this.escritor = escritor;
     }
 
@@ -54,22 +54,6 @@ public class Libro {
         this.numPaginas = numPaginas;
     }
 
-    public int getDuracionValor() {
-        return duracionValor;
-    }
-
-    public void setDuracionValor(int duracionValor) {
-        this.duracionValor = duracionValor;
-    }
-
-    public String getDuracionTipo() {
-        return duracionTipo;
-    }
-
-    public void setDuracionTipo(String duracionTipo) {
-        this.duracionTipo = duracionTipo;
-    }
-
     public String getEscritor() {
         return escritor;
     }
@@ -81,7 +65,6 @@ public class Libro {
     @Override
     public String toString() {
         return "Libro [ID=" + id + ", Título=" + titulo + ", Categoría=" + categoria +
-               ", Páginas=" + numPaginas + ", Duración=" + duracionValor + " " + duracionTipo +
-               ", Escritor=" + escritor + "]";
+               ", Páginas=" + numPaginas + ", Escritor=" + escritor + "]";
     }
 }

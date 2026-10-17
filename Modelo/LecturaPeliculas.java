@@ -15,9 +15,10 @@ import org.w3c.dom.NodeList;
 public class LecturaPeliculas {
 
     private static final String RUTA_XML = "Modelo/filmoteca.xml";
-
+    public String errorMessage; // Variable para almacenar el mensaje de error
     /**
-     * Lee las películas del XML, crea los objetos Pelicula y los devuelve en una lista.
+     * Lee únicamente las películas que se encuentran dentro del contenedor <peliculas> del XML,
+     * crea los objetos Pelicula y los devuelve en una lista.
      * 
      * @return Lista de películas leídas desde el XML.
      */
@@ -27,50 +28,55 @@ public class LecturaPeliculas {
         try {
             File archivo = new File(RUTA_XML);
 
-            if (!archivo.exists()) {
-                archivo = new File("filmoteca.xml");
-                System.err.println("No se encontró el archivo 'filmoteca.xml' para leer películas, se ha creado el archivo filmoteca.xml.");
-                return peliculas;
-            }
-
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document doc = builder.parse(archivo);
             doc.getDocumentElement().normalize();
 
-            NodeList listaPeliculas = doc.getElementsByTagName("pelicula");
-            for (int i = 0; i < listaPeliculas.getLength(); i++) {
-                Node nodo = listaPeliculas.item(i);
+            // Restricción: Localiza primero la sección contenedora <peliculas>
+            NodeList contenedorPeliculas = doc.getElementsByTagName("peliculas");
+            if (contenedorPeliculas.getLength() > 0) {
+                Element elemPeliculas = (Element) contenedorPeliculas.item(0);
+                NodeList listaPeliculas = elemPeliculas.getElementsByTagName("pelicula");
 
-                if (nodo.getNodeType() == Node.ELEMENT_NODE) {
-                    Element elemPelicula = (Element) nodo;
+                // Itera sobre cada elemento <pelicula> dentro del contenedor <peliculas>
+                for (int i = 0; i < listaPeliculas.getLength(); i++) {
+                    Node nodo = listaPeliculas.item(i);
 
-                    int id = Integer.parseInt(elemPelicula.getAttribute("id"));
-                    String titulo = getTextoEtiqueta(elemPelicula, "titulo");
-                    String categoria = getTextoEtiqueta(elemPelicula, "categoria");
-                    String director = getTextoEtiqueta(elemPelicula, "director");
+                    // Verifica que el nodo sea un elemento antes de procesarlo
+                    if (nodo.getNodeType() == Node.ELEMENT_NODE) {
+                        Element elemPelicula = (Element) nodo;
 
-                    int duracionValor = 0;
-                    String duracionTipo = "";
-                    NodeList nodosDuracion = elemPelicula.getElementsByTagName("duracion");
-                    if (nodosDuracion.getLength() > 0) {
-                        Element elemDuracion = (Element) nodosDuracion.item(0);
-                        duracionValor = Integer.parseInt(elemDuracion.getTextContent().trim());
-                        duracionTipo = elemDuracion.getAttribute("tipo");
+                        // Extrae los atributos y elementos de la película
+                        int id = Integer.parseInt(elemPelicula.getAttribute("id"));
+                        String titulo = getTextoEtiqueta(elemPelicula, "titulo");
+                        String categoria = getTextoEtiqueta(elemPelicula, "categoria");
+                        String director = getTextoEtiqueta(elemPelicula, "director");
+
+                        // Gestiona el atributo y el contenido de la etiqueta <duracion>
+                        int duracionValor = 0;
+                        String duracionTipo = "";
+                        NodeList nodosDuracion = elemPelicula.getElementsByTagName("duracion");
+                        if (nodosDuracion.getLength() > 0) {
+                            Element elemDuracion = (Element) nodosDuracion.item(0);
+                            duracionValor = Integer.parseInt(elemDuracion.getTextContent().trim());
+                            duracionTipo = elemDuracion.getAttribute("tipo");
+                        }
+
+                        Pelicula pelicula = new Pelicula(id, titulo, categoria, duracionValor, duracionTipo, director);
+                        peliculas.add(pelicula);
                     }
-
-                    Pelicula pelicula = new Pelicula(id, titulo, categoria, duracionValor, duracionTipo, director);
-                    peliculas.add(pelicula);
                 }
             }
 
         } catch (Exception e) {
-            System.err.println("Error al leer las películas del XML: " + e.getMessage());
+            errorMessage = "Error al leer las películas del XML: " + e.getMessage();
         }
 
         return peliculas;
     }
 
+    // Método auxiliar para obtener el texto de una etiqueta específica dentro de un elemento padre
     private String getTextoEtiqueta(Element elementoPadre, String nombreEtiqueta) {
         NodeList lista = elementoPadre.getElementsByTagName(nombreEtiqueta);
         if (lista.getLength() > 0 && lista.item(0) != null) {

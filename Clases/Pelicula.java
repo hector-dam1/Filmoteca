@@ -1,5 +1,9 @@
 package Filmoteca.Clases;
 
+/*
+ * Clase que representa una película en la filmoteca.
+ */
+
 public class Pelicula {
 
     private int id;
