@@ -1,5 +1,5 @@
 package Filmoteca.Modelo;
 
-public class flujo {
+public class Lectura {
     
 }

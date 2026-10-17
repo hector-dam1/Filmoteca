@@ -5,16 +5,18 @@ public class Pelicula {
     private int id;
     private String titulo;
     private String categoria;
-    private Duracion duracion;
+    private int duracionValor;
+    private String duracionTipo;
     private String director;
 
     public Pelicula() {}
 
-    public Pelicula(int id, String titulo, String categoria, Duracion duracion, String director) {
+    public Pelicula(int id, String titulo, String categoria, int duracionValor, String duracionTipo, String director) {
         this.id = id;
         this.titulo = titulo;
         this.categoria = categoria;
-        this.duracion = duracion;
+        this.duracionValor = duracionValor;
+        this.duracionTipo = duracionTipo;
         this.director = director;
     }
 
@@ -42,12 +44,20 @@ public class Pelicula {
         this.categoria = categoria;
     }
 
-    public Duracion getDuracion() {
-        return duracion;
+    public int getDuracionValor() {
+        return duracionValor;
     }
 
-    public void setDuracion(Duracion duracion) {
-        this.duracion = duracion;
+    public void setDuracionValor(int duracionValor) {
+        this.duracionValor = duracionValor;
+    }
+
+    public String getDuracionTipo() {
+        return duracionTipo;
+    }
+
+    public void setDuracionTipo(String duracionTipo) {
+        this.duracionTipo = duracionTipo;
     }
 
     public String getDirector() {
@@ -61,6 +71,6 @@ public class Pelicula {
     @Override
     public String toString() {
         return "Película [ID=" + id + ", Título=" + titulo + ", Categoría=" + categoria +
-               ", Duración=" + duracion + ", Director=" + director + "]";
+               ", Duración=" + duracionValor + " " + duracionTipo + ", Director=" + director + "]";
     }
 }
