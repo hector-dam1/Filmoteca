@@ -9,10 +9,6 @@ import Vista.VistaPeliculas;
 
 import java.util.List;
 
-/**
- * Controlador principal que conecta las Vistas con las clases 
- * controladoras especializadas (Lectura, Modificar, Borrar).
- */
 public class AppController {
 
     private final ConsoleView vista = new ConsoleView();
@@ -21,10 +17,8 @@ public class AppController {
     private final Borrar borrarController = new Borrar();
 
     public AppController() {
-        // Inicialización estándar
     }
 
-    /** Bucle del menú principal: se repite hasta que el usuario elige salir. */
     public void iniciar() {
         boolean salir = false;
         while (!salir) {
@@ -40,9 +34,32 @@ public class AppController {
         }
     }
 
+    // ------------------------------------------------------------ MÉTODOS AUXILIARES PARA AUTOINCREMENTAR ID
+
+    private int obtenerSiguienteIdLibro() {
+        List<Libro> libros = lecturaController.lecturaLibros().getLibros();
+        int maxId = 0;
+        for (Libro l : libros) {
+            if (l.getId() > maxId) {
+                maxId = l.getId();
+            }
+        }
+        return maxId + 1;
+    }
+
+    private int obtenerSiguienteIdPelicula() {
+        List<Pelicula> peliculas = lecturaController.lecturaPeliculas().getPeliculas();
+        int maxId = 0;
+        for (Pelicula p : peliculas) {
+            if (p.getId() > maxId) {
+                maxId = p.getId();
+            }
+        }
+        return maxId + 1;
+    }
+
     // ------------------------------------------------------------ LIBROS
 
-    /** Submenú de libros. */
     private void gestionarLibros() {
         VistaLibros v = vista.getVistaLibros();
         boolean volver = false;
@@ -68,6 +85,10 @@ public class AppController {
     private void anadirLibro(VistaLibros v) {
         Libro nuevo = v.pedirDatosLibro();
         if (nuevo != null) {
+            // Asignamos el siguiente ID disponible
+            int nuevoId = obtenerSiguienteIdLibro();
+            nuevo.setId(nuevoId);
+
             boolean exito = modificarController.modificarLibro(
                 nuevo.getId(),
                 nuevo.getTitulo(),
@@ -136,7 +157,6 @@ public class AppController {
 
     // --------------------------------------------------------- PELÍCULAS
 
-    /** Submenú de películas. */
     private void gestionarPeliculas() {
         VistaPeliculas v = vista.getVistaPeliculas();
         boolean volver = false;
@@ -162,6 +182,10 @@ public class AppController {
     private void anadirPelicula(VistaPeliculas v) {
         Pelicula nueva = v.pedirDatosPelicula();
         if (nueva != null) {
+            // Asignamos el siguiente ID disponible
+            int nuevoId = obtenerSiguienteIdPelicula();
+            nueva.setId(nuevoId);
+
             boolean exito = modificarController.modificarPelicula(
                 nueva.getId(),
                 nueva.getTitulo(),
