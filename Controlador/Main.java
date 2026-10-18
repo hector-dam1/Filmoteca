@@ -1,4 +1,4 @@
-import Controlador.AppController;
+package Controlador;
 
 /**
  Main. Crea el controlador y arranca el menú principal. Su lógica estará en appcontroller
