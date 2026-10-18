@@ -36,10 +36,10 @@ public class ConsoleView{
         System.out.println("3.Salir");
     }
     /**
-     * LLama al método leerInt() del objeto EntradaUsuario entrada
+     * LLama al método leerEntero() del objeto EntradaUsuario entrada
      */
     public int leerOpcion(){
-        return.entrada.leerInt("Elige una opción: ", OPCION_LIBROS, OPCION_SALIR);
+        return.entrada.leerEntero("Elige una opción: ", OPCION_LIBROS, OPCION_SALIR);
     }
     /**Devuelve texto; interacciona con el controlador
      * @return String mensaje
@@ -63,7 +63,7 @@ public class ConsoleView{
     /**Lo mismo pero para pelis
      * @return VistaPeliculas vistaPeliculas
      */
-    public VistaPeliculas getVistaPeliculas() {
+    public vistaPeliculas getVistaPeliculas() {
         return vistaPeliculas;
     }
 }
