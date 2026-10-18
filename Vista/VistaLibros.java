@@ -2,7 +2,7 @@ package Vista;
 
 import java.util.List;
 
-import Modelo.Pelicula;
+import Modelo.Libro;
 
 /**
  * Vista de peliculas, menu y formularios por pantalla
@@ -21,7 +21,7 @@ public class VistaLibros{
  
     private final EntradaUsuario entrada;
     //naturalmente  uy parecido a vistapeliculas
-    public VistaLibros(Entrada entrada) {
+    public VistaLibros(EntradaUsuario entrada) {
         this.entrada = entrada;
     }
 /** submenú de libros. */
@@ -55,6 +55,7 @@ public class VistaLibros{
             }
         }
         entrada.esperarEnter();
+        }
 
             /**
      * para crear un libro nuevo
@@ -104,16 +105,4 @@ public class VistaLibros{
         String r = entrada.leerTexto("¿Borrar \"" + libro.getTitulo() + "\"? (s/n): ");
         return r.equalsIgnoreCase("s");
     }
-
-
-
-
-
-    }
-
-
-
- 
- 
-
 }
