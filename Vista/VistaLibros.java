@@ -55,6 +55,22 @@ public class VistaLibros{
             }
         }
         entrada.esperarEnter();
+
+            /**
+     * para crear un libro nuevo
+     * @return libro con los datos
+     */
+    public Libro pedirDatosLibro() {
+        //el codigo aquí es bastante optimo diría yo
+        System.out.println("\n--- Nuevo libro ---");
+        String titulo = entrada.leerTexto("Título: ");
+        String categoria = entrada.leerTexto("Categoría: ");
+        int paginas = entrada.leerEntero("Número de páginas: ", 1, MAX_PAGINAS);
+        String escritor = entrada.leerTexto("Escritor: ");
+        return new Libro(0, titulo, categoria, paginas, escritor);
+    }
+
+
     }
 
 
