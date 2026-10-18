@@ -91,7 +91,11 @@ public class EntradaUsuario{
             }
         }
     }
-
+ /** Espera entrada de eneter por el usuario */
+    public void esperarEnter() {
+        System.out.print("\nPulsa Enter para continuar...");
+        sc.nextLine();
+    }   
     }
 
 
