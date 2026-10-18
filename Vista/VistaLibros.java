@@ -10,4 +10,19 @@ import modelo.Pelicula;
  */
 public class VistaLibros{
 
+ /** Opciones del submenú de películas. */
+ // staticos y constantes para facilitar el trabajo del conotrolador
+
+    public static final int LISTAR = 1;
+    public static final int ANADIR = 2;
+    public static final int MODIFICAR = 3;
+    public static final int BORRAR = 4;
+    public static final int VOLVER = 5;
+
+    private static final int MAX_MINUTOS = 1000;
+
+    //nuestra importantísima entrada
+    private final Entrada entrada;
+
+
 }
