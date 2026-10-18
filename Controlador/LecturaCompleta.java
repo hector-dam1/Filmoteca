@@ -16,7 +16,7 @@ public class LecturaCompleta {
      * 
      * @return Objeto Filmoteca cargado con todas las películas y libros.
      */
-    public Filmoteca LecturaCompleta() {
+    public Filmoteca lecturaCompleta() {
         Filmoteca filmoteca = new Filmoteca();
 
         // Lectura y guardado de películas
