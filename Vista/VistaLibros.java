@@ -40,6 +40,22 @@ public class VistaLibros{
     public int leerOpcion() {
         return entrada.leerEntero("Elige una opción: ", LISTAR, VOLVER);
     }
+        public void mostrarLibros(List<Libro> libros) {
+        System.out.println("\n--- Listado de libros ---");
+        if (libros.isEmpty()) {
+            System.out.println("No hay libros guardados.");
+        } else {
+            //eso no sabía hacerlo en java ni nde coña; lo miré en internet
+            System.out.printf("%-4s %-30s %-26s %-8s %s%n",
+                    "ID", "Título", "Categoría", "Páginas", "Escritor");
+            for (Libro l : libros) {
+                System.out.printf("%-4d %-30s %-26s %-8d %s%n",
+                        l.getId(), l.getTitulo(), l.getCategoria(),
+                        l.getNumPaginas(), l.getEscritor());
+            }
+        }
+        entrada.esperarEnter();
+    }
 
 
 
