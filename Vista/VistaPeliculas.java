@@ -1,4 +1,4 @@
-package vista;
+package Vista;
 
 import java.util.List;
 
@@ -66,5 +66,26 @@ public class VistaPeliculas{
         String director = entrada.leerTexto("Director: ");
         return new Pelicula(0, titulo, categoria, duracion, director);
     }
+    /**
+     * Para modificacion; eneter no altera nada
+     * 
+     * @param actual la peli sin alterarla
+     * @return pelicula con datos alterados y nuevo id
+     */
+      public Pelicula pedirDatosModificacion(Pelicula actual) {
+        System.out.println("\n--- Modificar película (Enter para dejar el valor actual) ---");
+        String titulo = entrada.leerTextoOpcional("Título", actual.getTitulo());
+        String categoria = entrada.leerTextoOpcional("Categoría", actual.getCategoria());
+        int duracion = entrada.leerEnteroOpcional("Duración (minutos)", actual.getDuracion(), 1, MAX_MINUTOS);
+        String director = entrada.leerTextoOpcional("Director", actual.getDirector());
+        return new Pelicula(actual.getId(), titulo, categoria, duracion, director);
+    }
+
+    public int pedirId(String accion) {
+        return entrada.leerEntero("ID de la película a " + accion + ": ", 1, Integer.MAX_VALUE);
+    }
+
+    
+
 
 }
