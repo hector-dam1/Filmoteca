@@ -24,6 +24,23 @@ public class VistaLibros{
     public VistaLibros(Entrada entrada) {
         this.entrada = entrada;
     }
+/** submenú de libros. */
+    public void mostrarMenu() {
+        System.out.println("\n--- LIBROS ---");
+        System.out.println("1. Ver libros");
+        System.out.println("2. Añadir libro");
+        System.out.println("3. Modificar libro");
+        System.out.println("4. Borrar libro");
+        System.out.println("5. Volver");
+    }
+    /**
+     * Lee la opción del submenú.
+     * @return un número entre 1 y 5
+     */
+    public int leerOpcion() {
+        return entrada.leerEntero("Elige una opción: ", LISTAR, VOLVER);
+    }
+
 
 
  
