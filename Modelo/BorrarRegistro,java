@@ -1,0 +1,113 @@
+package Filmoteca.Modelo;
+
+import java.io.File;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+public class BorrarRegistro {
+
+    private static final String RUTA_XML = "Modelo/filmoteca.xml";
+    public String errorMessage; // Almacena el mensaje de error en caso de fallo
+
+    /**
+     * Borra un registro del archivo XML buscando por su ID y el tipo seleccionado.
+     * 
+     * @param id   Identificador numérico del elemento a eliminar.
+     * @param tipo Tipo de registro ("pelicula" o "libro").
+     * @return true si el registro fue encontrado y borrado con éxito, false en caso contrario.
+     */
+    public boolean borrarRegistro(int id, String tipo) {
+        if (tipo == null || tipo.trim().isEmpty()) {
+            errorMessage = "Debe especificar un tipo válido: 'pelicula' o 'libro'.";
+            return false;
+        }
+
+        String tipoLimpio = tipo.trim().toLowerCase();
+        String contenedorTag;
+        String elementoTag;
+
+        // Determinamos las etiquetas objetivo según la selección
+        if (tipoLimpio.equals("pelicula") || tipoLimpio.equals("película")) {
+            contenedorTag = "peliculas";
+            elementoTag = "pelicula";
+        } else if (tipoLimpio.equals("libro")) {
+            contenedorTag = "libros";
+            elementoTag = "libro";
+        } else {
+            errorMessage = "Tipo no reconocido. Indique 'pelicula' o 'libro'.";
+            return false;
+        }
+
+        try {
+            File archivo = new File(RUTA_XML);
+            if (!archivo.exists()) {
+                errorMessage = "No se encontró el archivo XML en " + RUTA_XML;
+                return false;
+            }
+
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document doc = builder.parse(archivo);
+            doc.getDocumentElement().normalize();
+
+            // Acceso exclusivo al contenedor especificado (<peliculas> o <libros>)
+            NodeList contenedorList = doc.getElementsByTagName(contenedorTag);
+            if (contenedorList.getLength() == 0) {
+                errorMessage = "No se encontró la sección <" + contenedorTag + "> en el archivo XML.";
+                return false;
+            }
+
+            Element elemContenedor = (Element) contenedorList.item(0);
+            NodeList listaElementos = elemContenedor.getElementsByTagName(elementoTag);
+
+            // Búsqueda del nodo por atributo ID
+            Node nodoAEliminar = null;
+            for (int i = 0; i < listaElementos.getLength(); i++) {
+                Node nodo = listaElementos.item(i);
+                if (nodo.getNodeType() == Node.ELEMENT_NODE) {
+                    Element elem = (Element) nodo;
+                    if (elem.getAttribute("id").equals(String.valueOf(id))) {
+                        nodoAEliminar = nodo;
+                        break;
+                    }
+                }
+            }
+
+            // Si el ID no existe dentro de ese grupo
+            if (nodoAEliminar == null) {
+                errorMessage = "No se encontró ninguna " + elementoTag + " con el ID " + id + ".";
+                return false;
+            }
+
+            // Eliminación del elemento dentro del contenedor
+            elemContenedor.removeChild(nodoAEliminar);
+
+            // Guardado de los cambios en el archivo XML
+            guardarXML(doc, archivo);
+            return true;
+
+        } catch (Exception e) {
+            errorMessage = "Error al eliminar el registro del XML: " + e.getMessage();
+            return false;
+        }
+    }
+
+    private void guardarXML(Document doc, File archivo) throws Exception {
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+        transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+        DOMSource source = new DOMSource(doc);
+        StreamResult result = new StreamResult(archivo);
+        transformer.transform(source, result);
+    }
+}
