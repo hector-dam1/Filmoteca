@@ -1,4 +1,4 @@
-package Filmoteca.Clases;
+package Clases;
 
 /*
  * Clase que representa un libro en la filmoteca.

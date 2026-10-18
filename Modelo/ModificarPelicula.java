@@ -1,6 +1,6 @@
-package Filmoteca.Modelo;
+package Modelo;
 
-import Filmoteca.Clases.Pelicula;
+import Clases.Pelicula;
 
 import java.io.File;
 import javax.xml.parsers.DocumentBuilder;

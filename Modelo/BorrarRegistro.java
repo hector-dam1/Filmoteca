@@ -1,4 +1,4 @@
-package Filmoteca.Modelo;
+package Modelo;
 
 import java.io.File;
 import javax.xml.parsers.DocumentBuilder;

@@ -1,6 +1,6 @@
-package Filmoteca.Modelo;
+package Modelo;
 
-import Filmoteca.Clases.Libro;
+import Clases.Libro;
 
 import java.io.File;
 import java.util.ArrayList;
