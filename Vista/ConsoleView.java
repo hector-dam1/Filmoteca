@@ -25,7 +25,6 @@ public class ConsoleView{
     }
     /**
      * Se imprime por pantalla una interfaz primitiva con las opciones del usuario
-     * @return opciones de servicios del programa
      */
     //nuestro menú principal
     public void mostrarMenuPrincipal(){
@@ -36,18 +35,15 @@ public class ConsoleView{
     }
     /**
      * LLama al método leerEntero() del objeto EntradaUsuario entrada
+     * @return numero entre 1 y 5
      */
     public int leerOpcion(){
         return entrada.leerEntero("Elige una opción: ", OPCION_LIBROS, OPCION_SALIR);
     }
-    /**Devuelve texto; interacciona con el controlador
-     * @return String mensaje
-     */
     public void mostrarMensaje(String mensaje) {
         System.out.println(mensaje);
     }
     /**La misma lógica pero para mensajes de error
-     * @return String mesnaje
      */
     public void mostrarError(String mensaje) {
         System.out.println("ERROR: " + mensaje);
