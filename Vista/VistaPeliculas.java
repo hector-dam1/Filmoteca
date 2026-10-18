@@ -2,8 +2,10 @@ package Vista;
 
 import java.util.List;
 
-import Modelo.Pelicula;
-
+import Clases.Pelicula;
+/**
+ * Vista de las pelicuas con subenu. listado, etc.
+ */
 public class VistaPeliculas{
     /** Opciones del submenú de películas. */
    // staticos y constantes para facilitar el trabajo del conotrolador
@@ -20,7 +22,7 @@ public class VistaPeliculas{
     private final EntradaUsuario entrada;
 
      /**
-     * @param EntradaUsuario entrada
+     * @param entrada
      */
     public VistaPeliculas(EntradaUsuario entrada) {
         this.entrada = entrada;
@@ -34,12 +36,16 @@ public class VistaPeliculas{
         System.out.println("4. Borrar película");
         System.out.println("5. Volver");
     }
-     /**llama a leerEntero!!! */
+     /**lee la opcion del menu */
      public int leerOpcion() {
         return entrada.leerEntero("Elige una opción: ", LISTAR, VOLVER);
     }
+
+    /**
+     * Muestra las pelis en una tabla
+     */
      public void mostrarPeliculas(List<Pelicula> peliculas) {
-        System.out.println("--- Listado de películas ---");
+        System.out.println("\n--- Listado de películas ---");
         if (peliculas.isEmpty()) {
             System.out.println("No hay películas guardadas.");
         } else {
@@ -48,7 +54,7 @@ public class VistaPeliculas{
             for (Pelicula p : peliculas) {
                 System.out.printf("%-4d %-28s %-28s %-9d %s%n",
                         p.getId(), p.getTitulo(), p.getCategoria(),
-                        p.getDuracion(), p.getDirector());
+                        p.getDuracionValor(), p.getDirector());
             }
         }
         entrada.esperarEnter();
@@ -64,7 +70,7 @@ public class VistaPeliculas{
         String categoria = entrada.leerTexto("Categoría: ");
         int duracion = entrada.leerEntero("Duración (minutos): ", 1, MAX_MINUTOS);
         String director = entrada.leerTexto("Director: ");
-        return new Pelicula(0, titulo, categoria, duracion, director);
+        return new Pelicula(0, titulo, categoria, duracion, "minutos", director);
     }
     /**
      * Para modificacion; eneter no altera nada
@@ -76,9 +82,9 @@ public class VistaPeliculas{
         System.out.println("\n--- Modificar película (Enter para dejar el valor actual) ---");
         String titulo = entrada.leerTextoOpcional("Título", actual.getTitulo());
         String categoria = entrada.leerTextoOpcional("Categoría", actual.getCategoria());
-        int duracion = entrada.leerEnteroOpcional("Duración (minutos)", actual.getDuracion(), 1, MAX_MINUTOS);
+        int duracion = entrada.leerEnteroOpcional("Duración (minutos)", actual.getDuracionValor(), 1, MAX_MINUTOS);
         String director = entrada.leerTextoOpcional("Director", actual.getDirector());
-        return new Pelicula(actual.getId(), titulo, categoria, duracion, director);
+        return new Pelicula(actual.getId(), titulo, categoria, duracion, actual.getDuracionTipo(), director);
     }
     /**
      * Pide el id de la  peli q se trabaja
@@ -89,7 +95,7 @@ public class VistaPeliculas{
 
     /**confirmacion ates de elminar una pelicula
      * @pelicula que se elimina 
-     * @retunr {@code true} si el usuario confirma
+     * @retunr {@code true} si el usuario
      */
      public boolean confirmarBorrado(Pelicula pelicula) {
         String r = entrada.leerTexto("¿Borrar \"" + pelicula.getTitulo() + "\"? (s/n): ");

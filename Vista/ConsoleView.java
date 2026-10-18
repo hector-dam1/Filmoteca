@@ -1,5 +1,4 @@
 package Vista; 
-import java.util.Scanner;
 
 public class ConsoleView{
     
@@ -11,22 +10,21 @@ public class ConsoleView{
     public static final int OPCION_SALIR = 3;
 
     //lo que se hace aquí: entrada es delegada a otra clase que se encarga de validaciones etc.; 
-    private final EntradaUsuario input = new EntradaUsuario();
+    private final EntradaUsuario entrada = new EntradaUsuario();
     //ambas vistas por separado
     private final VistaLibros vistaLibros;
     private final VistaPeliculas vistaPeliculas;
     
     //método muy importante -> objetos de las dos vistas creados a la vez con la entrada compartida
     /**
-     * Constructor: instancias de ambas vistas son creadas con la entrada input de la clase EntradaUsuario establecida por defecto
+     * Constructor: instancias de ambas vistas son creadas con la entrada  de la clase EntradaUsuario establecida por defecto
      */
     public ConsoleView(){
-        vistaLibros = new VistaLibros(input);
-        vistaPeliculas = new VistaPeliculas(input);
+        vistaLibros = new VistaLibros(entrada);
+        vistaPeliculas = new VistaPeliculas(entrada);
     }
     /**
      * Se imprime por pantalla una interfaz primitiva con las opciones del usuario
-     * @return opciones de servicios del programa
      */
     //nuestro menú principal
     public void mostrarMenuPrincipal(){
@@ -37,18 +35,15 @@ public class ConsoleView{
     }
     /**
      * LLama al método leerEntero() del objeto EntradaUsuario entrada
+     * @return numero entre 1 y 5
      */
     public int leerOpcion(){
-        return.entrada.leerEntero("Elige una opción: ", OPCION_LIBROS, OPCION_SALIR);
+        return entrada.leerEntero("Elige una opción: ", OPCION_LIBROS, OPCION_SALIR);
     }
-    /**Devuelve texto; interacciona con el controlador
-     * @return String mensaje
-     */
     public void mostrarMensaje(String mensaje) {
         System.out.println(mensaje);
     }
     /**La misma lógica pero para mensajes de error
-     * @return String mesnaje
      */
     public void mostrarError(String mensaje) {
         System.out.println("ERROR: " + mensaje);
@@ -63,7 +58,7 @@ public class ConsoleView{
     /**Lo mismo pero para pelis
      * @return VistaPeliculas vistaPeliculas
      */
-    public vistaPeliculas getVistaPeliculas() {
+    public VistaPeliculas getVistaPeliculas() {
         return vistaPeliculas;
     }
 }

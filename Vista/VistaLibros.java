@@ -2,10 +2,10 @@ package Vista;
 
 import java.util.List;
 
-import Modelo.Pelicula;
+import Clases.Libro;
 
 /**
- * Vista de peliculas, menu y formularios por pantalla
+ * Vista de libros, menu y formularios por pantalla
 
  */
 public class VistaLibros{
@@ -21,7 +21,7 @@ public class VistaLibros{
  
     private final EntradaUsuario entrada;
     //naturalmente  uy parecido a vistapeliculas
-    public VistaLibros(Entrada entrada) {
+    public VistaLibros(EntradaUsuario entrada) {
         this.entrada = entrada;
     }
 /** submenú de libros. */
@@ -55,6 +55,7 @@ public class VistaLibros{
             }
         }
         entrada.esperarEnter();
+        }
 
             /**
      * para crear un libro nuevo
@@ -70,13 +71,6 @@ public class VistaLibros{
         return new Libro(0, titulo, categoria, paginas, escritor);
     }
 
-        /**
-         * MOdifica los datos de un libro;
-         * enter no altera nada
-         * @param libro 
-         * @return libro cno datos alterados 
-         */
-
         public Libro pedirDatosModificacion(Libro actual) {
         System.out.println("\n--- Modificar libro (Enter para dejar el valor actual) ---");
         String titulo = entrada.leerTextoOpcional("Título", actual.getTitulo());
@@ -88,7 +82,7 @@ public class VistaLibros{
         /**
          * Se PIDE AL usuario el id del libbro sobre el cual se va actuar 
          * @param accion CRUD
-         * @return el id es
+         * @return el id 
          */
         //se pide aquí la acción para reutilziarse código con muchos metodos diferentes y para la vista del usuario
         public int pedirId(String accion) {
@@ -104,16 +98,4 @@ public class VistaLibros{
         String r = entrada.leerTexto("¿Borrar \"" + libro.getTitulo() + "\"? (s/n): ");
         return r.equalsIgnoreCase("s");
     }
-
-
-
-
-
-    }
-
-
-
- 
- 
-
 }
