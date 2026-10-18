@@ -70,6 +70,23 @@ public class VistaLibros{
         return new Libro(0, titulo, categoria, paginas, escritor);
     }
 
+        /**
+         * MOdifica los datos de un libro;
+         * enter no altera nada
+         * @param libro 
+         * @return libro cno datos alterados 
+         */
+
+        public Libro pedirDatosModificacion(Libro actual) {
+        System.out.println("\n--- Modificar libro (Enter para dejar el valor actual) ---");
+        String titulo = entrada.leerTextoOpcional("Título", actual.getTitulo());
+        String categoria = entrada.leerTextoOpcional("Categoría", actual.getCategoria());
+        int paginas = entrada.leerEnteroOpcional("Páginas", actual.getNumPaginas(), 1, MAX_PAGINAS);
+        String escritor = entrada.leerTextoOpcional("Escritor", actual.getEscritor());
+        return new Libro(actual.getId(), titulo, categoria, paginas, escritor);
+    }
+
+
 
     }
 
