@@ -22,7 +22,13 @@ public class VistaLibros{
     private static final int MAX_MINUTOS = 1000;
 
     //nuestra importantísima entrada
-    private final Entrada entrada;
+    private final EntradaUsuario entrada;
 
+     /**
+     * @param EntradaUsuario entrada
+     */
+    public VistaPeliculas(EntradaUsuario entrada) {
+        this.entrada = entrada;
+    }
 
 }
