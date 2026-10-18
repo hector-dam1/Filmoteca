@@ -5,6 +5,7 @@ package Controlador;
  */
 public class Main {
     public static void main(String[] args) {
-        new AppController().iniciar();
+        AppController appController = new AppController();
+        appController.iniciar();
     }
 }
