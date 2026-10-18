@@ -1,4 +1,4 @@
-package vista;
+package Vista;
 //imprescindible aquí
 import java.util.Scanner;
 
