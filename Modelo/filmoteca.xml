@@ -1,7 +1,4 @@
-//XML Filmoteca
-/*hasta última hora no nos dimos cuenta de que faltaba esta linea*/
-
-<?xml version="1.0" encoding="UTF-8"?> 
+<?xml version="1.0" encoding="UTF-8"?>
 <filmoteca>
     <peliculas>
         <pelicula id="1">
@@ -91,7 +88,7 @@
         </libro>
 
         <libro id="2">
-            <titulo>Poemas</titulo>   //libros que nos gustan mucho 
+            <titulo>Poemas</titulo>
             <categoria>Poesía</categoria>
             <numPaginas>150</numPaginas>
             <escritor>Stéphane Mallarmé</escritor>
