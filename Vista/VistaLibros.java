@@ -93,7 +93,18 @@ public class VistaLibros{
         //se pide aquí la acción para reutilziarse código con muchos metodos diferentes y para la vista del usuario
         public int pedirId(String accion) {
         return entrada.leerEntero("ID del libro a " + accion + ": ", 1, Integer.MAX_VALUE);
+        }
+    /**
+     * confirmación antes de borrar igual que vistapeli
+     *
+     * @param libro  libro que se borra
+     * @return {@code true} si el usuario confirma
+     */
+    public boolean confirmarBorrado(Libro libro) {
+        String r = entrada.leerTexto("¿Borrar \"" + libro.getTitulo() + "\"? (s/n): ");
+        return r.equalsIgnoreCase("s");
     }
+
 
 
 
