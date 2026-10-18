@@ -1,6 +1,6 @@
-package Filmoteca.Controlador;
+package Controlador;
 
-import Filmoteca.Modelo.BorrarRegistro;
+import Modelo.BorrarRegistro;
 
 public class Borrar {
 

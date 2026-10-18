@@ -1,9 +1,9 @@
-package Filmoteca.Controlador;
+package Controlador;
 
-import Filmoteca.Clases.Libro;
-import Filmoteca.Clases.Pelicula;
-import Filmoteca.Modelo.ModificarLibro;
-import Filmoteca.Modelo.ModificarPelicula;
+import Clases.Libro;
+import Clases.Pelicula;
+import Modelo.ModificarLibro;
+import Modelo.ModificarPelicula;
 
 public class Modificar {
 
