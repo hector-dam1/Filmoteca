@@ -12,8 +12,6 @@ public class Filmoteca {
     private List<Pelicula> peliculas = new ArrayList<>();
     private List<Libro> libros = new ArrayList<>();
 
-    public Filmoteca() {}
-
     public List<Pelicula> getPeliculas() {
         return peliculas;
     }
