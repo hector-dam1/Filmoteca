@@ -8,7 +8,7 @@ import Modelo.LecturaPeliculas;
 
 import java.util.List;
 
-public class LecturaCompleta {
+public class Lectura {
 
     /**
      * Realiza las llamadas a lecturaPeliculas y lecturaLibros,
@@ -16,19 +16,25 @@ public class LecturaCompleta {
      * 
      * @return Objeto Filmoteca cargado con todas las películas y libros.
      */
-    public Filmoteca lecturaCompleta() {
+    public Filmoteca lecturaLibros() {
         Filmoteca filmoteca = new Filmoteca();
-
-        // Lectura y guardado de películas
-        LecturaPeliculas lectorPeliculas = new LecturaPeliculas();
-        List<Pelicula> peliculas = lectorPeliculas.lecturaPeliculas();
-        filmoteca.setPeliculas(peliculas);
 
         // Lectura y guardado de libros
         LecturaLibros lectorLibros = new LecturaLibros();
         List<Libro> libros = lectorLibros.lecturaLibros();
         filmoteca.setLibros(libros);
 
+        return filmoteca;
+    }
+
+    public Filmoteca lecturaPeliculas(){
+        Filmoteca filmoteca = new Filmoteca();
+
+        // Lectura y guardado de películas
+        LecturaPeliculas lectorPeliculas = new LecturaPeliculas();
+        List<Pelicula> peliculas = lectorPeliculas.lecturaPeliculas();
+        filmoteca.setPeliculas(peliculas);
+        
         return filmoteca;
     }
 }
