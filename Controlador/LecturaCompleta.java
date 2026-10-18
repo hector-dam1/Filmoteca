@@ -1,10 +1,10 @@
-package Filmoteca.Controlador;
+package Controlador;
 
-import Filmoteca.Clases.Filmoteca;
-import Filmoteca.Clases.Libro;
-import Filmoteca.Clases.Pelicula;
-import Filmoteca.Modelo.LecturaLibros;
-import Filmoteca.Modelo.LecturaPeliculas;
+import Clases.Filmoteca;
+import Clases.Libro;
+import Clases.Pelicula;
+import Modelo.LecturaLibros;
+import Modelo.LecturaPeliculas;
 
 import java.util.List;
 
