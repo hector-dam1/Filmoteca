@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class EntradaUsuario{
 
     //nuestro único scanner de todo el programa
-    public static final Scanner uli = new Scanner(System.in);
+    public static final Scanner sc = new Scanner(System.in);
 
     /**pide texto; bucle; no pouede estar vacío
      * 
