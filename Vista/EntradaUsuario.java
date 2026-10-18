@@ -11,7 +11,8 @@ import java.util.Scanner;
 public class EntradaUsuario{
 
     //nuestro único scanner de todo el programa
-    public static final Scanner sc = new Scanner(System.in);
+    //SI NO ES PRIVADO NO TIENE SENTIDO NINGUNO!!!!!
+    private static final Scanner sc = new Scanner(System.in);
 
     /**pide texto; bucle; no pouede estar vacío
      * 
@@ -53,6 +54,7 @@ public class EntradaUsuario{
                 System.out.println("  Eso no es un número válido.");
             }
         }
+    }
           /**
      * Se pide texto para modificacion; Enter no altera nada;
      * @param mensaje nombre del campo - escritor, nombre pelicula, etc.
@@ -97,8 +99,3 @@ public class EntradaUsuario{
         sc.nextLine();
     }   
     }
-
-
-
-
-}
