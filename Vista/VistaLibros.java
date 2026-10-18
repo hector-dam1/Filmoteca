@@ -85,6 +85,16 @@ public class VistaLibros{
         String escritor = entrada.leerTextoOpcional("Escritor", actual.getEscritor());
         return new Libro(actual.getId(), titulo, categoria, paginas, escritor);
     }
+        /**
+         * Se PIDE AL usuario el id del libbro sobre el cual se va actuar 
+         * @param accion CRUD
+         * @return el id es
+         */
+        //se pide aquí la acción para reutilziarse código con muchos metodos diferentes y para la vista del usuario
+        public int pedirId(String accion) {
+        return entrada.leerEntero("ID del libro a " + accion + ": ", 1, Integer.MAX_VALUE);
+    }
+
 
 
 
