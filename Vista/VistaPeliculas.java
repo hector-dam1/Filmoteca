@@ -22,7 +22,7 @@ public class VistaPeliculas{
     private final EntradaUsuario entrada;
 
      /**
-     * @param EntradaUsuario entrada
+     * @param entrada
      */
     public VistaPeliculas(EntradaUsuario entrada) {
         this.entrada = entrada;
@@ -36,12 +36,16 @@ public class VistaPeliculas{
         System.out.println("4. Borrar película");
         System.out.println("5. Volver");
     }
-     /**llama a leerEntero!!! */
+     /**lee la opcion del menu */
      public int leerOpcion() {
         return entrada.leerEntero("Elige una opción: ", LISTAR, VOLVER);
     }
+
+    /**
+     * Muestra las pelis en una tabla
+     */
      public void mostrarPeliculas(List<Pelicula> peliculas) {
-        System.out.println("--- Listado de películas ---");
+        System.out.println("\n--- Listado de películas ---");
         if (peliculas.isEmpty()) {
             System.out.println("No hay películas guardadas.");
         } else {
