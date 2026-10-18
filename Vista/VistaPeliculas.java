@@ -80,10 +80,22 @@ public class VistaPeliculas{
         String director = entrada.leerTextoOpcional("Director", actual.getDirector());
         return new Pelicula(actual.getId(), titulo, categoria, duracion, director);
     }
-
+    /**
+     * Pide el id de la  peli q se trabaja
+     */
     public int pedirId(String accion) {
         return entrada.leerEntero("ID de la película a " + accion + ": ", 1, Integer.MAX_VALUE);
     }
+
+    /**confirmacion ates de elminar una pelicula
+     * @pelicula que se elimina 
+     * @retunr {@code true} si el usuario confirma
+     */
+     public boolean confirmarBorrado(Pelicula pelicula) {
+        String r = entrada.leerTexto("¿Borrar \"" + pelicula.getTitulo() + "\"? (s/n): ");
+        return r.equalsIgnoreCase("s");
+    }
+
 
     
 
