@@ -15,7 +15,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-public class EscribirLibro {
+public class ModificarLibro {
 
     private static final String RUTA_XML = "Modelo/filmoteca.xml";
     public String errorMessage; // Almacena el mensaje de error en caso de fallo
@@ -28,7 +28,7 @@ public class EscribirLibro {
      * @param libro Objeto de tipo Libro que se desea guardar.
      * @return true si la operación fue exitosa, false en caso contrario.
      */
-    public boolean escribirLibro(Libro libro) {
+    public boolean modificarLibro(Libro libro) {
         if (libro == null) {
             errorMessage = "El libro proporcionado no puede ser nulo.";
             return false;

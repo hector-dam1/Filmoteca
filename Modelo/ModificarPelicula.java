@@ -15,7 +15,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-public class EscribirPelicula {
+public class ModificarPelicula {
 
     private static final String RUTA_XML = "Modelo/filmoteca.xml";
     public String errorMessage; // Almacena el mensaje de error en caso de fallo
@@ -28,7 +28,7 @@ public class EscribirPelicula {
      * @param pelicula Objeto de tipo Pelicula que se desea guardar.
      * @return true si la operación fue exitosa, false en caso contrario.
      */
-    public boolean escribirPelicula(Pelicula pelicula) {
+    public boolean modificarPelicula(Pelicula pelicula) {
         if (pelicula == null) {
             errorMessage = "La película proporcionada no puede ser nula.";
             return false;

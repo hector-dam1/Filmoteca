@@ -19,34 +19,14 @@ public class BorrarRegistro {
     public String errorMessage; // Almacena el mensaje de error en caso de fallo
 
     /**
-     * Borra un registro del archivo XML buscando por su ID y el tipo seleccionado.
+     * Elimina un elemento del XML utilizando directamente los nombres de las etiquetas.
      * 
-     * @param id   Identificador numérico del elemento a eliminar.
-     * @param tipo Tipo de registro ("pelicula" o "libro").
+     * @param id            Identificador numérico del elemento a eliminar.
+     * @param contenedorTag Nombre del nodo contenedor ("peliculas" o "libros").
+     * @param elementoTag   Nombre del nodo del elemento ("pelicula" o "libro").
      * @return true si el registro fue encontrado y borrado con éxito, false en caso contrario.
      */
-    public boolean borrarRegistro(int id, String tipo) {
-        if (tipo == null || tipo.trim().isEmpty()) {
-            errorMessage = "Debe especificar un tipo válido: 'pelicula' o 'libro'.";
-            return false;
-        }
-
-        String tipoLimpio = tipo.trim().toLowerCase();
-        String contenedorTag;
-        String elementoTag;
-
-        // Determinamos las etiquetas objetivo según la selección
-        if (tipoLimpio.equals("pelicula") || tipoLimpio.equals("película")) {
-            contenedorTag = "peliculas";
-            elementoTag = "pelicula";
-        } else if (tipoLimpio.equals("libro")) {
-            contenedorTag = "libros";
-            elementoTag = "libro";
-        } else {
-            errorMessage = "Tipo no reconocido. Indique 'pelicula' o 'libro'.";
-            return false;
-        }
-
+    public boolean borrarRegistro(int id, String contenedorTag, String elementoTag) {
         try {
             File archivo = new File(RUTA_XML);
             if (!archivo.exists()) {
@@ -59,7 +39,7 @@ public class BorrarRegistro {
             Document doc = builder.parse(archivo);
             doc.getDocumentElement().normalize();
 
-            // Acceso exclusivo al contenedor especificado (<peliculas> o <libros>)
+            // Acceso directo al contenedor indicado (<peliculas> o <libros>)
             NodeList contenedorList = doc.getElementsByTagName(contenedorTag);
             if (contenedorList.getLength() == 0) {
                 errorMessage = "No se encontró la sección <" + contenedorTag + "> en el archivo XML.";
@@ -82,16 +62,16 @@ public class BorrarRegistro {
                 }
             }
 
-            // Si el ID no existe dentro de ese grupo
+            // Si el ID no se encuentra dentro del contenedor
             if (nodoAEliminar == null) {
                 errorMessage = "No se encontró ninguna " + elementoTag + " con el ID " + id + ".";
                 return false;
             }
 
-            // Eliminación del elemento dentro del contenedor
+            // Eliminación del nodo
             elemContenedor.removeChild(nodoAEliminar);
 
-            // Guardado de los cambios en el archivo XML
+            // Guardar cambios en el archivo XML
             guardarXML(doc, archivo);
             return true;
 
