@@ -30,5 +30,16 @@ public class VistaLibros{
     public VistaPeliculas(EntradaUsuario entrada) {
         this.entrada = entrada;
     }
+      /** Menú pelis. */
+    public void mostrarMenu() {
+        System.out.println("\n--- PELÍCULAS ---");
+        System.out.println("1. Ver películas");
+        System.out.println("2. Añadir película");
+        System.out.println("3. Modificar película");
+        System.out.println("4. Borrar película");
+        System.out.println("5. Volver");
+    }
+
+
 
 }
