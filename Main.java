@@ -1,5 +1,6 @@
-package Controlador;
+//main incorporado al develop
 
+import Controlador.AppController;
 /**
  Main. Crea el controlador y arranca el menú principal. Su lógica estará en appcontroller
  */
