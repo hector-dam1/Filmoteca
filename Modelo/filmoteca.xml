@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<filmoteca>
+                        
+    
+    
+    
+    
+    <peliculas>
+                                                
+        
+        
+        
+        
+        <pelicula id="1">
+                                                                        
+            
+            
+            
+            
+            <titulo>Eyes Wide Shut</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Drama / Misterio</categoria>
+                                                                        
+            
+            
+            
+            
+            <duracion tipo="minutos">159</duracion>
+                                                                        
+            
+            
+            
+            
+            <director>Stanley Kubrick</director>
+                                                                    
+        
+        
+        
+        
+        </pelicula>
+                                                
+        
+        
+        
+        
+        <pelicula id="2">
+                                                                        
+            
+            
+            
+            
+            <titulo>Barry Lyndon</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Drama / Épica</categoria>
+                                                                        
+            
+            
+            
+            
+            <duracion tipo="minutos">185</duracion>
+                                                                        
+            
+            
+            
+            
+            <director>Stanley Kubrick</director>
+                                                                    
+        
+        
+        
+        
+        </pelicula>
+                                                
+        
+        
+        
+        
+        <pelicula id="3">
+                                                                        
+            
+            
+            
+            
+            <titulo>Ratatouille</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Animación</categoria>
+                                                                        
+            
+            
+            
+            
+            <duracion tipo="minutos">111</duracion>
+                                                                        
+            
+            
+            
+            
+            <director>Brad Bird</director>
+                                                                    
+        
+        
+        
+        
+        </pelicula>
+                                                
+        
+        
+        
+        
+        <pelicula id="4">
+                                                                        
+            
+            
+            
+            
+            <titulo>El Planeta del Tesoro</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Animación / Ciencia ficción</categoria>
+                                                                        
+            
+            
+            
+            
+            <duracion tipo="minutos">95</duracion>
+                                                                        
+            
+            
+            
+            
+            <director>Ron Clements y John Musker</director>
+                                                                    
+        
+        
+        
+        
+        </pelicula>
+                                                
+        
+        
+        
+        
+        <pelicula id="5">
+                                                                        
+            
+            
+            
+            
+            <titulo>The Social Network</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Drama biográfico</categoria>
+                                                                        
+            
+            
+            
+            
+            <duracion tipo="minutos">120</duracion>
+                                                                        
+            
+            
+            
+            
+            <director>David Fincher</director>
+                                                                    
+        
+        
+        
+        
+        </pelicula>
+                                                
+        
+        
+        
+        
+        <pelicula id="6">
+                                                                        
+            
+            
+            
+            
+            <titulo>O Auto da Compadecida</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Comedia / Aventura</categoria>
+                                                                        
+            
+            
+            
+            
+            <duracion tipo="minutos">104</duracion>
+                                                                        
+            
+            
+            
+            
+            <director>Guel Arraes</director>
+                                                                    
+        
+        
+        
+        
+        </pelicula>
+                                                
+        
+        
+        
+        
+        <pelicula id="7">
+                                                                        
+            
+            
+            
+            
+            <titulo>Funny Games</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Terror / Drama psicológico</categoria>
+                                                                        
+            
+            
+            
+            
+            <duracion tipo="minutos">108</duracion>
+                                                                        
+            
+            
+            
+            
+            <director>Michael Haneke</director>
+                                                                    
+        
+        
+        
+        
+        </pelicula>
+                                                
+        
+        
+        
+        
+        <pelicula id="8">
+                                                                        
+            
+            
+            
+            
+            <titulo>Una noche en el museo</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Comedia / Aventura</categoria>
+                                                                        
+            
+            
+            
+            
+            <duracion tipo="minutos">108</duracion>
+                                                                        
+            
+            
+            
+            
+            <director>Shawn Levy</director>
+                                                                    
+        
+        
+        
+        
+        </pelicula>
+                                                
+        
+        
+        
+        
+        <pelicula id="9">
+                                                                        
+            
+            
+            
+            
+            <titulo>Uncut Gems</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Suspense / Drama</categoria>
+                                                                        
+            
+            
+            
+            
+            <duracion tipo="minutos">135</duracion>
+                                                                        
+            
+            
+            
+            
+            <director>Hermanos Safdie</director>
+                                                                    
+        
+        
+        
+        
+        </pelicula>
+                                                
+        
+        
+        
+        
+        <pelicula id="10">
+                                                                        
+            
+            
+            
+            
+            <titulo>Pulp Fiction</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Crimen / Drama</categoria>
+                                                                        
+            
+            
+            
+            
+            <duracion tipo="minutos">154</duracion>
+                                                                        
+            
+            
+            
+            
+            <director>Quentin Tarantino</director>
+                                                                    
+        
+        
+        
+        
+        </pelicula>
+                                                
+        
+        
+        
+        
+        <pelicula id="11">
+                                                                        
+            
+            
+            
+            
+            <titulo>El dragón de la maldad contra el santo guerrero</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Drama / Acción</categoria>
+                                                                        
+            
+            
+            
+            
+            <duracion tipo="minutos">95</duracion>
+                                                                        
+            
+            
+            
+            
+            <director>Glauber Rocha</director>
+                                                                    
+        
+        
+        
+        
+        </pelicula>
+                                            
+    
+    
+    
+    
+    </peliculas>
+                    //el ser dos cosas a la vez, tener dos tipos de artículos con categorías diferentes, alterará toda la estrucutración de nuestro código
+    
+    
+    
+    
+    
+    <libros>
+                                                
+        
+        
+        
+        
+        <libro id="1">
+                                                                        
+            
+            
+            
+            
+            <titulo>Los Hermanos Karamázov</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Novela filosófica</categoria>
+                                                                        
+            
+            
+            
+            
+            <numPaginas>824</numPaginas>
+                                                                        
+            
+            
+            
+            
+            <escritor>Fiódor Dostoyevski</escritor>
+                                                                    
+        
+        
+        
+        
+        </libro>
+                                                
+        
+        
+        
+        
+        <libro id="2">
+                                                                        
+            
+            
+            
+            
+            <titulo>Poemas</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Poesía</categoria>
+                                                                        
+            
+            
+            
+            
+            <numPaginas>150</numPaginas>
+                                                                        
+            
+            
+            
+            
+            <escritor>Stéphane Mallarmé</escritor>
+                                                                    
+        
+        
+        
+        
+        </libro>
+                                                
+        
+        
+        
+        
+        <libro id="3">
+                                                                        
+            
+            
+            
+            
+            <titulo>Gran Sertón: Veredas</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Novela</categoria>
+                                                                        
+            
+            
+            
+            
+            <numPaginas>600</numPaginas>
+                                                                        
+            
+            
+            
+            
+            <escritor>João Guimarães Rosa</escritor>
+                                                                    
+        
+        
+        
+        
+        </libro>
+                                                
+        
+        
+        
+        
+        <libro id="4">
+                                                                        
+            
+            
+            
+            
+            <titulo>Vidas secas</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Novela regionalista</categoria>
+                                                                        
+            
+            
+            
+            
+            <numPaginas>176</numPaginas>
+                                                                        
+            
+            
+            
+            
+            <escritor>Graciliano Ramos</escritor>
+                                                                    
+        
+        
+        
+        
+        </libro>
+                                                
+        
+        
+        
+        
+        <libro id="5">
+                                                                        
+            
+            
+            
+            
+            <titulo>Dublineses</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Cuentos / Relatos cortos</categoria>
+                                                                        
+            
+            
+            
+            
+            <numPaginas>256</numPaginas>
+                                                                        
+            
+            
+            
+            
+            <escritor>James Joyce</escritor>
+                                                                    
+        
+        
+        
+        
+        </libro>
+                                                
+        
+        
+        
+        
+        <libro id="6">
+            <titulo>Orgullo y Prejuicio</titulo>
+            <categoria>Novela romántica / Sátira</categoria>
+            <numPaginas>432</numPaginas>
+            <escritor>Myriam Jimenez</escritor>
+        </libro>
+                                                
+        
+        
+        
+        
+        <libro id="7">
+                                                                        
+            
+            
+            
+            
+            <titulo>Hamlet</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Tragedia / Teatro</categoria>
+                                                                        
+            
+            
+            
+            
+            <numPaginas>160</numPaginas>
+                                                                        
+            
+            
+            
+            
+            <escritor>William Shakespeare</escritor>
+                                                                    
+        
+        
+        
+        
+        </libro>
+                                                
+        
+        
+        
+        
+        <libro id="8">
+                                                                        
+            
+            
+            
+            
+            <titulo>Edipo Rey</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Tragedia / Teatro clásico</categoria>
+                                                                        
+            
+            
+            
+            
+            <numPaginas>110</numPaginas>
+                                                                        
+            
+            
+            
+            
+            <escritor>Sófocles</escritor>
+                                                                    
+        
+        
+        
+        
+        </libro>
+                                                
+        
+        
+        
+        
+        <libro id="9">
+                                                
+            
+            
+            <titulo>Las Bacantes</titulo>
+                                                
+            
+            
+            <categoria>Tragedia griega</categoria>
+                                                
+            
+            
+            <numPaginas>100</numPaginas>
+                                                
+            
+            
+            <escritor>Euripides</escritor>
+                                            
+        
+        
+        </libro>
+                                                
+        
+        
+        
+        
+        <libro id="10">
+                        
+            <titulo>Así Habló Zaratustra</titulo>
+                        
+            <categoria>Filosofía / Literatura</categoria>
+                        
+            <numPaginas>350</numPaginas>
+                        
+            <escritor>Friedrich Nietzsche</escritor>
+                    
+        </libro>
+                                                
+        
+        
+        
+        
+        <libro id="11">
+                                                                        
+            
+            
+            
+            
+            <titulo>Fausto</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Tragedia / Literatura dramática</categoria>
+                                                                        
+            
+            
+            
+            
+            <numPaginas>300</numPaginas>
+                                                                        
+            
+            
+            
+            
+            <escritor>Johann Wolfgang von Goethe</escritor>
+                                                                    
+        
+        
+        
+        
+        </libro>
+                                                
+        
+        
+        
+        
+        <libro id="12">
+                                                                        
+            
+            
+            
+            
+            <titulo>Don Quijote de la Mancha</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Novela satírica / Caballería</categoria>
+                                                                        
+            
+            
+            
+            
+            <numPaginas>863</numPaginas>
+                                                                        
+            
+            
+            
+            
+            <escritor>Miguel de Cervantes</escritor>
+                                                                    
+        
+        
+        
+        
+        </libro>
+                                                
+        
+        
+        
+        
+        <libro id="13">
+                                                                        
+            
+            
+            
+            
+            <titulo>Bodas de Sangre</titulo>
+                                                                        
+            
+            
+            
+            
+            <categoria>Tragedia / Teatro</categoria>
+                                                                        
+            
+            
+            
+            
+            <numPaginas>120</numPaginas>
+                                                                        
+            
+            
+            
+            
+            <escritor>Federico García Lorca</escritor>
+                                                                    
+        
+        
+        
+        
+        </libro>
+                                            
+    
+    
+        
+        
+        <libro id="14">
+                                    
+            
+            <titulo>The Art of Computer Programming</titulo>
+                                    
+            
+            <categoria>Informática / Educación</categoria>
+                                    
+            
+            <numPaginas>3900</numPaginas>
+                                    
+            
+            <escritor>Donald Knuth</escritor>
+                                
+        
+        </libro>
+                    
+    
+    </libros>
+                    
+
+
+
+
+</filmoteca>
